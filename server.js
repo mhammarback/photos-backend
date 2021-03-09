@@ -8,8 +8,8 @@ import multer from 'multer'
 import cloudinaryStorage from 'multer-storage-cloudinary'
 
 
-const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/books-tracker';
-mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
+const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/animal-photos'
+mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
 
 const Animal = mongoose.model('Animal', {
@@ -31,7 +31,7 @@ dotenv.config()
 //Cloudinary setup
 const cloudinary = cloudinaryFramework.v2
 cloudinary.config({ 
-  cloud_name: 'sample', 
+  cloud_name: 'mhammarback', 
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET
 })
